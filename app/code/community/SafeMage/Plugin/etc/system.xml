@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <system>
+            <groups>
+                <plugin translate="label comment">
+                    <label>Plugins (Interceptors)</label>
+                    <frontend_type>text</frontend_type>
+                    <frontend_model>safemage_plugin/adminhtml_system_plugin</frontend_model>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                        <enabled translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </enabled>
+                        <block_plugins translate="label">
+                            <label>Block Plugins</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>safemage_plugin/adminhtml_system_plugin_list</frontend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </block_plugins>
+                        <helper_plugins translate="label">
+                            <label>Helper Plugins</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>safemage_plugin/adminhtml_system_plugin_list</frontend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </helper_plugins>
+                        <model_plugins translate="label">
+                            <label>Model Plugins</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>safemage_plugin/adminhtml_system_plugin_list</frontend_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <depends>
+                                <enabled>1</enabled>
+                            </depends>
+                        </model_plugins>
+                    </fields>
+                </plugin>
+            </groups>
+        </system>
+    </sections>
+</config>

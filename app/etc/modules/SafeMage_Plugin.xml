@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SafeMage_Plugin>
+            <active>true</active>
+            <codePool>community</codePool>
+            <extension_name>Function Plugins (Interceptors)</extension_name>
+            <cache_key>plugin</cache_key>
+            <url></url>
+        </SafeMage_Plugin>
+    </modules>
+</config>

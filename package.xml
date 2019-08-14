@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>SafeMage_Plugin</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.safemage.com/LICENSE_EULA.txt">SafeMage EULA</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Function Plugins(Interceptors) for Magento&#xAE; 1</summary>
+    <description>Plugin is a new solution to override Magento Core functionality instead of rewrites and events</description>
+    <notes>Initial Release</notes>
+    <authors><author><name>SafeMage</name><user>safemage</user><email>info@safemage.com</email></author></authors>
+    <date>2016-12-10</date>
+    <time>10:06:20</time>
+    <contents><target name="magecommunity"><dir name="SafeMage"><dir name="Plugin"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Plugin"><file name="List.php" hash="e1b2f24ad3b1aaaf41693888e3456411"/></dir><file name="Plugin.php" hash="50608a642601ee1272c297f78fcf3da5"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="d9dd5134b45cbefeae99af0fe1e0bdb2"/></dir><dir name="Model"><file name="Observer.php" hash="4a9d257c61da42f5725b703200c2aafc"/><file name="Plugin.php" hash="669940a7413871e618ac57b8b2609df8"/></dir><dir name="etc"><file name="config.xml" hash="3c713e32ac8227849dcf196769b5e8bb"/><file name="system.xml" hash="6d98f4b7a28475a5c275669d5df4a93e"/></dir></dir></dir></target><target name="magelocal"><dir name="Mage"><dir name="Core"><dir name="Model"><file name="Config.php" hash="0cbadee9995ef197d56acf002f2ba2e1"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="SafeMage_Plugin.xml" hash="47af3f56cc6cbebba8ec582d9668f369"/></dir></target><target name="mage"><dir name="lib"><dir name="SafeMage"><file name="Plugin.php" hash="ac5ef3c93dce3f84aa2e8cf41e6d1d82"/><dir name="Plugin"><file name="File.php" hash="5e980985ea3371c0ce192d16af3e0eb3"/><file name="Renderer.php" hash="bfc2dd6742bef8e6ff44cc7470de7364"/></dir></dir></dir></target><target name="magelocale"><dir name="en_US"><file name="SafeMage_Plugin.csv" hash="3b3f63e7b038395e4742ef198416c3c7"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
