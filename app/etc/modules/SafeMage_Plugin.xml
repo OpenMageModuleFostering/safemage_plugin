@@ -1,4 +1,13 @@
 <?xml version="1.0"?>
+<!--
+NOTICE OF LICENSE
+
+This source file is subject to the SafeMageEULA that is bundled with this package in the file LICENSE.txt.
+
+It is also available at this URL: http://www.safemage.com/LICENSE_EULA.txt
+
+Copyright (c)  SafeMage (http://www.safemage.com/)
+-->
 <config>
     <modules>
         <SafeMage_Plugin>
@@ -6,7 +15,7 @@
             <codePool>community</codePool>
             <extension_name>Function Plugins (Interceptors)</extension_name>
             <cache_key>plugin</cache_key>
-            <url></url>
+            <url>function-plugins-interceptors-for-magento-1</url>
         </SafeMage_Plugin>
     </modules>
 </config>

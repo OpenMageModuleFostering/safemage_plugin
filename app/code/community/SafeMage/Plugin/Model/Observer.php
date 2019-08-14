@@ -1,6 +1,20 @@
 <?php
+/*
+NOTICE OF LICENSE
+
+This source file is subject to the SafeMageEULA that is bundled with this package in the file LICENSE.txt.
+
+It is also available at this URL: http://www.safemage.com/LICENSE_EULA.txt
+
+Copyright (c)  SafeMage (http://www.safemage.com/)
+*/
+
 class SafeMage_Plugin_Model_Observer
 {
+    /**
+     * @param Varien_Event_Observer $observer
+     * @return void
+     */
     public function adminCacheRefreshType(Varien_Event_Observer $observer)
     {
         $type = $observer->getEvent()->getType();
@@ -9,11 +23,19 @@ class SafeMage_Plugin_Model_Observer
         }
     }
 
+    /**
+     * @param Varien_Event_Observer $observer
+     * @return void
+     */
     public function adminCacheFlushAll(Varien_Event_Observer $observer)
     {
         $this->_flushPluginCache();
     }
 
+    /**
+     * @param Varien_Event_Observer $observer
+     * @return void
+     */
     public function adminCacheFlushSystem(Varien_Event_Observer $observer)
     {
         $this->_flushPluginCache();
@@ -27,6 +49,10 @@ class SafeMage_Plugin_Model_Observer
         }
     }
 
+    /**
+     * @param Varien_Event_Observer $observer
+     * @return void
+     */
     public function checkWritablePluginsDir($observer)
     {
         $request = $observer->getControllerAction()->getRequest();

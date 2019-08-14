@@ -1,4 +1,14 @@
 <?php
+/*
+NOTICE OF LICENSE
+
+This source file is subject to the SafeMageEULA that is bundled with this package in the file LICENSE.txt.
+
+It is also available at this URL: http://www.safemage.com/LICENSE_EULA.txt
+
+Copyright (c)  SafeMage (http://www.safemage.com/)
+*/
+
 class SafeMage_Plugin_Model_Plugin
 {
     /**
@@ -7,7 +17,7 @@ class SafeMage_Plugin_Model_Plugin
      * @return obj
      * @throws Mage_Core_Exception
      */
-    public function aroundGetBlockInstance(obj $object, array $arguments)
+    public function aroundGetBlockInstance($object, array $arguments)
     {
         list($block, $attributes) = $arguments;
 

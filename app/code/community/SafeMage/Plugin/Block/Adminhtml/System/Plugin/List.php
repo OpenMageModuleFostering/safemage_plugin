@@ -1,6 +1,20 @@
 <?php
+/*
+NOTICE OF LICENSE
+
+This source file is subject to the SafeMageEULA that is bundled with this package in the file LICENSE.txt.
+
+It is also available at this URL: http://www.safemage.com/LICENSE_EULA.txt
+
+Copyright (c)  SafeMage (http://www.safemage.com/)
+*/
+
 class SafeMage_Plugin_Block_Adminhtml_System_Plugin_List extends Mage_Adminhtml_Block_System_Config_Form_Field
 {
+    /**
+     * @param Varien_Data_Form_Element_Abstract $element
+     * @return string
+     */
     public function render(Varien_Data_Form_Element_Abstract $element)
     {
         $id = $element->getHtmlId();
@@ -12,6 +26,10 @@ class SafeMage_Plugin_Block_Adminhtml_System_Plugin_List extends Mage_Adminhtml_
         return $this->_decorateRowHtml($element, $html);
     }
 
+    /**
+     * @param Varien_Data_Form_Element_Abstract $element
+     * @return string
+     */
     protected function _getElementHtml(Varien_Data_Form_Element_Abstract $element)
     {
         $source = '';

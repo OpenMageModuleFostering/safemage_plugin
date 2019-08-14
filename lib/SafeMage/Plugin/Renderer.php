@@ -1,16 +1,35 @@
 <?php
+/*
+NOTICE OF LICENSE
+
+This source file is subject to the SafeMageEULA that is bundled with this package in the file LICENSE.txt.
+
+It is also available at this URL: http://www.safemage.com/LICENSE_EULA.txt
+
+Copyright (c)  SafeMage (http://www.safemage.com/)
+*/
+
 
 class SafeMage_Plugin_Renderer extends Varien_Object
 {
     protected $_phpCode;
 
     /**
+     * SafeMage_Plugin_Renderer constructor.
+     *
+     */
+    public function __construct()
+    {
+        parent::__construct();
+        define('NL', PHP_EOL . '    ');
+        define('NL2', PHP_EOL . '        ');
+    }
+
+    /**
      * @param $className string
      */
     public function init($className)
     {
-        define('NL', PHP_EOL . '    ');
-        define('NL2', PHP_EOL . '        ');
         $this->_phpCode = '';
         $this->setClassName($className);
     }
@@ -82,6 +101,14 @@ class SafeMage_Plugin_Renderer extends Varien_Object
         return $code;
     }
 
+    /**
+     * @param $method string
+     * @param $before array
+     * @param $around array
+     * @param $after array
+     * @return string
+     * @throws Exception
+     */
     protected function _renderMethod($method, $before, $around, $after)
     {
         $className = $this->getClassName();
@@ -92,12 +119,22 @@ class SafeMage_Plugin_Renderer extends Varien_Object
 
         $sParamsWithDefaults = array();
         $sParams = array();
+
         foreach($method->getParameters() as $param) {
             $sParams[]= '$' . $param->name;
             $sParamWithDefaults = '$' . $param->name;
-            if ( $param->isDefaultValueAvailable() ) {
+            if ($param->isDefaultValueAvailable()) {
                 $sParamWithDefaults .= ' = ' . $this->_varExport($param->getDefaultValue());
             }
+
+            if ($param->isPassedByReference()) {
+                $sParamWithDefaults = '&' . $sParamWithDefaults;
+            }
+
+            if ($param->isArray()) {
+                $sParamWithDefaults = 'array ' . $sParamWithDefaults;
+            }
+
             $sParamsWithDefaults[]= $sParamWithDefaults;
         }
 
@@ -145,6 +182,10 @@ class SafeMage_Plugin_Renderer extends Varien_Object
         return $var;
     }
 
+    /**
+     * @param ReflectionMethod $method
+     * @throws Exception
+     */
     protected function _validateMethod(ReflectionMethod $method)
     {
         if ($method->isFinal()) {

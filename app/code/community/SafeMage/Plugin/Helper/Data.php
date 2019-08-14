@@ -1,4 +1,14 @@
 <?php
+/*
+NOTICE OF LICENSE
+
+This source file is subject to the SafeMageEULA that is bundled with this package in the file LICENSE.txt.
+
+It is also available at this URL: http://www.safemage.com/LICENSE_EULA.txt
+
+Copyright (c)  SafeMage (http://www.safemage.com/)
+*/
+
 class SafeMage_Plugin_Helper_Data extends Mage_Core_Helper_Abstract
 {
     /**
@@ -8,6 +18,7 @@ class SafeMage_Plugin_Helper_Data extends Mage_Core_Helper_Abstract
     {
         $file = SafeMage_Plugin_File::getDir() . 'test.txt';
         $io = new Varien_Io_File();
+        $io->open(array('path' => SafeMage_Plugin_File::getDir()));
         $result = $io->write($file, 'test');
         if ($result) {
             $result = $io->rm($file);

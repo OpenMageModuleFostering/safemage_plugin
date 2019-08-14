@@ -1,6 +1,20 @@
 <?php
+/*
+NOTICE OF LICENSE
+
+This source file is subject to the SafeMageEULA that is bundled with this package in the file LICENSE.txt.
+
+It is also available at this URL: http://www.safemage.com/LICENSE_EULA.txt
+
+Copyright (c)  SafeMage (http://www.safemage.com/)
+*/
+
 class SafeMage_Plugin_Block_Adminhtml_System_Plugin extends Mage_Adminhtml_Block_System_Config_Form_Fieldset
 {
+    /**
+     * @param Varien_Data_Form_Element_Abstract $element
+     * @return string
+     */
     protected function _getFooterHtml($element)
     {
         $tooltipsExist = false;

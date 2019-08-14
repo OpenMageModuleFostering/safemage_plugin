@@ -1,14 +1,27 @@
 <?php
+/*
+NOTICE OF LICENSE
 
-class SafeMage_Plugin
+This source file is subject to the SafeMageEULA that is bundled with this package in the file LICENSE.txt.
+
+It is also available at this URL: http://www.safemage.com/LICENSE_EULA.txt
+
+Copyright (c)  SafeMage (http://www.safemage.com/)
+*/
+
+class SafeMage_Plugin extends Varien_Autoload
 {
-    const TYPE_BEFORE  = 'before';
+    const TYPE_BEFORE = 'before';
     const TYPE_AROUND = 'around';
-    const TYPE_AFTER   = 'after';
+    const TYPE_AFTER = 'after';
 
+    /**
+     * SafeMage_Plugin constructor.
+     * @param $arg
+     */
     public function __construct($arg)
     {
-        spl_autoload_register(array(__CLASS__, 'autoload'));
+        spl_autoload_register(array(__CLASS__, 'autoload'), true, true);
     }
 
     /**
@@ -20,8 +33,7 @@ class SafeMage_Plugin
     public function autoload($className)
     {
         if ($this->isPluginClass($className)) {
-            $inc = SafeMage_Plugin_File::getDir() . $className . '.php';
-            return include $inc;
+            include SafeMage_Plugin_File::getDir() . $className . '.php';
         }
     }
 
