@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>SafeMage_Plugin</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <stability>stable</stability>
     <license uri="http://www.safemage.com/LICENSE_EULA.txt">SafeMage EULA</license>
     <channel>community</channel>
@@ -10,9 +10,9 @@
     <description>Plugin is a new solution to override Magento Core functionality instead of rewrites and events</description>
     <notes>Initial Release</notes>
     <authors><author><name>SafeMage</name><user>safemage</user><email>info@safemage.com</email></author></authors>
-    <date>2016-12-22</date>
-    <time>19:52:26</time>
-    <contents><target name="magecommunity"><dir name="SafeMage"><dir name="Plugin"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Plugin"><file name="List.php" hash="c7ea878f58809ca5ab267757856d1854"/></dir><file name="Plugin.php" hash="6f886c5502228a0e4e5bab380f3e5296"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="bcff91f9a243b4e98ea0698d1c2c6b64"/></dir><dir name="Model"><file name="Observer.php" hash="3eaaadb0a719de9ebe30caf75d3942a4"/><file name="Plugin.php" hash="961c91da3b4515289b6f1345a79f98ac"/></dir><dir name="etc"><file name="config.xml" hash="8257bc908e874567b6a120b4e1c766f2"/><file name="system.xml" hash="cefd5433e535d792aa5c88d942fa2eb3"/></dir></dir></dir></target><target name="magelocal"><dir name="Mage"><dir name="Core"><dir name="Model"><file name="Config.php" hash="87b462b811547fe52fba1cce4a4fe175"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="SafeMage_Plugin.xml" hash="ce988d049c76d8d0db6a4482356f3677"/></dir></target><target name="mage"><dir name="lib"><dir name="SafeMage"><file name="Plugin.php" hash="6b8d76d1a3e391d921222e2a56fcc0f9"/><dir name="Plugin"><file name="File.php" hash="241a8c978df78cd846141c00a9889769"/><file name="Renderer.php" hash="79ea0603dc2d45c7390640e60c51f48c"/></dir></dir></dir></target><target name="magelocale"><dir name="en_US"><file name="SafeMage_Plugin.csv" hash="3b3f63e7b038395e4742ef198416c3c7"/></dir></target></contents>
+    <date>2017-01-03</date>
+    <time>08:43:48</time>
+    <contents><target name="magecommunity"><dir name="SafeMage"><dir name="Plugin"><dir name="Block"><dir name="Adminhtml"><dir name="System"><dir name="Plugin"><file name="List.php" hash="c7ea878f58809ca5ab267757856d1854"/></dir><file name="Plugin.php" hash="6f886c5502228a0e4e5bab380f3e5296"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="bcff91f9a243b4e98ea0698d1c2c6b64"/></dir><dir name="Model"><file name="Observer.php" hash="3eaaadb0a719de9ebe30caf75d3942a4"/><file name="Plugin.php" hash="961c91da3b4515289b6f1345a79f98ac"/></dir><dir name="etc"><file name="config.xml" hash="99a38d089e43bbcded5ae979920e47fc"/><file name="system.xml" hash="cefd5433e535d792aa5c88d942fa2eb3"/></dir></dir></dir></target><target name="magelocal"><dir name="Mage"><dir name="Core"><dir name="Model"><file name="Config.php" hash="87b462b811547fe52fba1cce4a4fe175"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="SafeMage_Plugin.xml" hash="ce988d049c76d8d0db6a4482356f3677"/></dir></target><target name="mage"><dir name="lib"><dir name="SafeMage"><file name="Plugin.php" hash="6b8d76d1a3e391d921222e2a56fcc0f9"/><dir name="Plugin"><file name="File.php" hash="241a8c978df78cd846141c00a9889769"/><file name="Renderer.php" hash="93731012cb79c76c14ecd358d2987587"/></dir></dir></dir></target><target name="magelocale"><dir name="en_US"><file name="SafeMage_Plugin.csv" hash="3b3f63e7b038395e4742ef198416c3c7"/></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

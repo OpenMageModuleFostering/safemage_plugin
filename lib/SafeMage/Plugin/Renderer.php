@@ -133,6 +133,8 @@ class SafeMage_Plugin_Renderer extends Varien_Object
 
             if ($param->isArray()) {
                 $sParamWithDefaults = 'array ' . $sParamWithDefaults;
+            } elseif($paramClass = $param->getClass()) {
+                $sParamWithDefaults = $paramClass->name . ' ' . $sParamWithDefaults;
             }
 
             $sParamsWithDefaults[]= $sParamWithDefaults;
