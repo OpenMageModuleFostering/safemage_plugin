@@ -1,5 +1,5 @@
 {
-    "name": "OpenMageModuleFostering\/SafeMage_Plugin",
+    "name": "openmage-module-fostering\/safemage_plugin",
     "type": "magento-module",
     "license": "SafeMage-EULA",
     "homepage": "",
