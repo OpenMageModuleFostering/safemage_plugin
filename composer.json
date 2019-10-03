@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/SafeMage_Plugin",
+    "name": "OpenMageModuleFostering\/SafeMage_Plugin",
     "type": "magento-module",
     "license": "SafeMage-EULA",
     "homepage": "",
-    "description": "Function Plugins(Interceptors) for Magento® 1",
+    "description": "Function Plugins(Interceptors) for Magento\u00ae 1",
     "authors": [
-    {
-        "name": "SafeMage",
-        "email": "info@safemage.com"
-    }
-],
+        {
+            "name": "SafeMage",
+            "email": "info@safemage.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
